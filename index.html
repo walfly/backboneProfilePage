@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+var logEm = function (data){
+  console.log(JSON.stringify(data));
+};
+
+var req = $.ajax({
+                  url: "http://dev.knotch.it:8080/miniProject/user_feed/500e3b57bbcd08696800000a/10",
+                  type: 'GET',
+                });
+req.done(logEm);
+    </script>
+  </body>
+</html>
