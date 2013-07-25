@@ -1,0 +1,197 @@
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  height: 2000px;
+}
+
+.topbar {
+  display: block;
+  width: 100%;
+  height: 60px;
+  top: -20px;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-top: 30px;
+  position: fixed;
+  z-index: 2;
+
+  background-color: white;
+
+  text-align: center;
+
+}
+
+.topbar > div{
+  z-index: 2;
+  position: relative;
+  display: inline;
+  margin-left: -60px;
+}
+
+.logo {
+  float: left;
+  position: relative;
+  z-index: 2;
+  margin-top: -5px;
+  margin-left: 30px;
+}
+
+.undershadow {
+  width: 100%;
+  height: 100%;
+  margin-top: -12px;
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+  z-index: 1;
+}
+
+.userData{
+  top: 45px;
+  margin-left: -10px;
+  margin-right: -10px;
+  background-color: #F7F5ED;
+}
+
+.profilePic{
+  display: block;
+  padding-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.userData > div{
+  display: block;
+  padding-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.location{
+  margin-top: -20px;
+}
+
+.stats{
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.stats > div{
+  display: inline-block;
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.following{
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+
+.followers{
+  border-left: 1px solid grey;
+}
+
+.divider{
+  position: relative;
+  display: block;
+  margin-left: -10px;
+  margin-right: -10px;
+  background-color: black;
+  height: 30px;
+}
+
+.colors{
+  display: block;
+  padding-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.color{
+  float: left;
+  position: relative;
+  height: 10px;
+}
+
+.zero{
+  background-color: #2e5ca6;
+}
+
+.two{
+  background-color: #586db9;
+}
+
+.four{
+  background-color: #008fd0;
+}
+
+.six{
+  background-color: #57cccc;
+}
+
+.eight{
+  background-color: #ceebee;
+}
+
+.ten{
+  background-color: #ffffff;
+}
+
+.twelve{
+  background-color: #ffeec3;
+}
+
+.fourteen{
+  background-color: #ffcc43;
+}
+
+.sixteen{
+  background-color: #ffa02d;
+}
+
+.eighteen{
+  background-color: #ff6d3a;
+}
+
+.twenty{
+  background-color: #ee443a;
+}
+
+.knotch{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.topKnotch{
+  display: block;
+  height: 60px;
+}
+
+.cat{
+  float: left;
+  margin-top: 2px;
+}
+
+.sideT{
+  float: right;
+}
+
+.knotchContent{
+  height: 175px;
+  display: block;
+  text-align: center;
+  padding-top: 45px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.knotchContent > p{
+  text-align: center;
+}
+

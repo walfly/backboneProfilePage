@@ -1,19 +1,78 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <!--styles-->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <!--lib-->
+    <script src='javascript/lib/jquery.js'></script>
+    <script src='javascript/lib/underscore.js'></script>
+    <script src='javascript/lib/handlebars.js'></script>
+    <script src='javascript/lib/backbone.js'></script>
+    <!--data-->
+    <script src='javascript/jsondata.js'></script>
+    <!--namespace-->
+    <script src='javascript/knotch.js'></script>
+    <!--views-->
+    <script src='javascript/views/appView.js'></script>
+    <script src='javascript/views/navbarView.js'></script>
+    <script src='javascript/views/userDataView.js'></script>
+    <script src='javascript/views/colorBarView.js'></script>
+    <script src='javascript/views/knotchView.js'></script>
+    <!--models-->
+    <script src='javascript/models/userModel.js'></script>
+    <script src='javascript/models/knotchModel.js'></script>
+    <!--collections-->
+    <script src='javascript/collections/knotchCollection.js'></script>
+    <!--handlebars helpers-->
+    <script src='javascript/helpers/handlebarHelpers.js'></script>
   </head>
   <body>
-    <script type="text/javascript">
-var logEm = function (data){
-  console.log(JSON.stringify(data));
-};
+    <!--templates-->
+    <script id = 'topbar-template' type="text/x-handlebars-template">
+      <div class = 'topbar'><img class = 'logo' src = 'styles/assets/knotch-logo.png'/><div>{{name}}</div><img class = 'undershadow' src = 'styles/assets/nav-bar.png'/></div>
+    </script>
+    <script id = 'userData-template' type="text/x-handlebars-template">
+      <div class = 'userData'>
+        <div>
+          <img class = 'profilePic' src = "{{profilePicUrl}}" width='100' height='100'/>
+        </div>
+        <div class = 'name'> <h2>{{name}}</h2></div>
+        <div class = 'location'> {{location}} </div>
+        <div class = 'stats'>
+          <div> {{num_topics}} Topics </div>
+          <div class = 'followers'> {{num_followers}} Followers </div>
+          <div class = 'following'> {{num_following}} Following </div>
+          <div> {{num_glory}} Glory </div>
+        </div>
+      </div>
+    </script>
+    <script id = 'colorBar-template' type="text/x-handlebars-template">
+      <div class = 'divider'>
+        <div class = 'colors' style = 'width:{{floor colorWidth}}px'>
+          {{#each sentiments}}
+            <div class = 'color {{classNum @key}}' style = "width:{{width ../colorWidth this}}px"></div>
+          {{/each}}
+        </div>
+      </div>
+    </script>
+    <script id = 'knotch-template' type="text/x-handlebars-template">
+      <div class = 'knotch' style = 'width:{{floor colorWidth}}px'>
+        <div class = 'topKnotch'>
+          <h1 class = 'cat'>{{category.name}}</h1>
+          <img class = 'sideT' src = 'knotchboxes/triangle10.png'/>
+        </div>
+        <div class = 'knotchContent {{classNum sentiment}}'>
+          <p>{{comment}}</p>
+        </div>
+      </div>
+    </script>
 
-var req = $.ajax({
-                  url: "http://dev.knotch.it:8080/miniProject/user_feed/500e3b57bbcd08696800000a/10",
-                  type: 'GET',
-                });
-req.done(logEm);
+
+    <!--initialize backbone-->
+    <script type="text/javascript">
+      $(function() {
+        knotch.init();
+      });
     </script>
   </body>
 </html>
