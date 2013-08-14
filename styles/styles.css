@@ -3,8 +3,91 @@
   box-sizing:border-box;
 }
 
-body{
-  height: 2000px;
+@font-face{
+  font-family: Aller_Bd;
+  src: url("assets/fonts/Aller/Aller_Bd.ttf");
+}
+
+@font-face{
+  font-family: Aller_Bdlt;
+  src: url("assets/fonts/Aller/Aller_BdIt.ttf");
+}
+
+@font-face{
+  font-family: Aller_lt;
+  src: url("assets/fonts/Aller/Aller_It.ttf");
+}
+
+@font-face{
+  font-family: Aller_Ltlt;
+  src: url("assets/fonts/Aller/Aller_LtIt.ttf");
+}
+
+@font-face{
+  font-family: Aller_Rg;
+  src: url("assets/fonts/Aller/Aller_Rg.ttf");
+}
+
+@font-face{
+  font-family: AllerDisplay;
+  src: url("assets/fonts/Aller/AllerDisplay.ttf");
+}
+
+@font-face{
+  font-family: Lato-Bla;
+  src: url("assets/fonts/lato/Lato-Bla.ttf");
+}
+
+@font-face{
+  font-family: Lato-Blalta;
+  src: url("assets/fonts/lato/Lato-BlaIta.ttf");
+}
+
+@font-face{
+  font-family: Lato-Bol;
+  src: url("assets/fonts/lato/Lato-Bol.ttf");
+}
+
+@font-face{
+  font-family: Lato-Bollta;
+  src: url("assets/fonts/lato/Lato-BolIta.ttf");
+}
+
+@font-face{
+  font-family: Lato-Hai;
+  src: url("assets/fonts/lato/Lato-Hai.ttf");
+}
+
+@font-face{
+  font-family: Lato-Hailta;
+  src: url("assets/fonts/lato/Lato-HaiIta.ttf");
+}
+
+@font-face{
+  font-family: Lato-Lig;
+  src: url("assets/fonts/lato/Lato-Lig.ttf");
+}
+
+@font-face{
+  font-family: Lato-Liglta;
+  src: url("assets/fonts/lato/Lato-LigIta.ttf");
+}
+
+@font-face{
+  font-family: Lato-Reg;
+  src: url("assets/fonts/lato/Lato-Reg.ttf");
+}
+
+h2{
+  font-family: Lato-Reg;
+}
+
+h3{
+  font-family: Lato-Reg;
+}
+
+p{
+  font-family: Aller_Rg;
 }
 
 .topbar {
@@ -20,6 +103,8 @@ body{
 
   background-color: white;
 
+  font-size: 20px;
+  font-family: Lato-Reg;
   text-align: center;
 
 }
@@ -114,8 +199,15 @@ body{
 
 .color{
   float: left;
+  border: none;
   position: relative;
   height: 10px;
+}
+
+.selected{
+  box-sizing:content-box;
+  margin-top: -2px;
+  border: 2px white solid;
 }
 
 .zero{
@@ -139,6 +231,11 @@ body{
 }
 
 .ten{
+  background-color: #ffffff;
+}
+
+.tenK{
+  border: 2px solid grey;
   background-color: #ffffff;
 }
 
@@ -170,12 +267,12 @@ body{
 }
 .topKnotch{
   display: block;
-  height: 60px;
+  height: 50px;
 }
 
 .cat{
   float: left;
-  margin-top: 2px;
+  margin-top: -6px;
 }
 
 .sideT{
@@ -186,7 +283,7 @@ body{
   height: 175px;
   display: block;
   text-align: center;
-  padding-top: 45px;
+  padding-top: 55px;
   padding-right: 50px;
   padding-left: 50px;
 }
@@ -194,4 +291,34 @@ body{
 .knotchContent > p{
   text-align: center;
 }
+
+.speecharrow{
+  margin-top: -2px;
+  margin-left: 20px;
+}
+
+.author{
+  margin-top: 5px;
+}
+
+.author > img{
+  float: left;
+}
+
+.author > h3 {
+  padding-top: 15px;
+  margin-left: 80px;
+}
+
+.reply{
+  display: block;
+}
+.reply > img{
+  float: left;
+}
+.author > p {
+  padding-top: 20px;
+  margin-left: 80px;
+}
+
 

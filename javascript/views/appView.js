@@ -18,8 +18,8 @@ knotch.Views.AppView = Backbone.View.extend({
     var knotchList = new knotch.Collections.KnotchCollection(this.knotches);
     var colorBar = new knotch.Views.ColorBarView({collection: knotchList});
     this.$el.append(colorBar.el);
-    var knotchle = new knotch.Views.KnotchView({model: this.knotches[0]});
-    this.$el.append(knotchle.el);
+    var knotches = new knotch.Views.KnotchesView({collection: knotchList});
+    this.$el.append(knotches.el);
   }
 
 });

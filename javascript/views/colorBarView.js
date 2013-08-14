@@ -5,6 +5,23 @@ knotch.Views.ColorBarView = Backbone.View.extend({
     this.render();
   },
 
+  events:{
+    'click .color': 'filterBySentiment'
+  },
+
+  filterBySentiment: function (e){
+    var targ = $(e.target);
+    var data = targ.data('number');
+    $('.colors').children().removeClass('selected');
+    if(this.presenting !== data){
+      targ.addClass('selected');
+      this.presenting = data;
+    } else {
+      this.presenting = 50;
+    }
+    this.collection.trigger('select', data);
+  },
+
   render: function (){
     var totalWidth = window.innerWidth;
     var colorWidth = totalWidth*.675;

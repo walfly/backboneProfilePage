@@ -9,7 +9,6 @@ knotch.Views.KnotchView = Backbone.View.extend({
     var colorWidth = totalWidth*.675;
     var context = this.model.toJSON();
     context.colorWidth = colorWidth;
-    console.log(context);
     var template = Handlebars.compile(this.template);
     var html = template(context);
     this.$el.html(html);
